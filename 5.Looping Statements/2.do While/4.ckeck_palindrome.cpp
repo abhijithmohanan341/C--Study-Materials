@@ -19,7 +19,7 @@ void main()
         reverse=reverse*10+digit;
         n=n/10;
     }
-    while(n!=0);
+    while(n>0);
 
     if(temp==reverse)
     {
