@@ -67,3 +67,18 @@ while (i <= 5);
 ```
 
 **Key Point:** `while` checks the condition before executing the body. `do-while` checks the condition after executing the body.
+
+## 5. Nested `for` Loop
+
+**Definition:** A nested `for` loop is a `for` loop placed inside another `for` loop. The inner loop executes completely for each iteration of the outer loop.
+
+**Syntax:**
+```c
+for (initialization1; condition1; update1)
+{
+    for (initialization2; condition2; update2)
+    {
+        statements;
+    }
+}
+```
