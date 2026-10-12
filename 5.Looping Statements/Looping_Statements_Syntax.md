@@ -35,3 +35,35 @@ for (initialization; condition; update)
     statements;
 }
 ```
+
+## 4. Difference Between `while` and `do-while`
+
+| `while` Loop | `do-while` Loop |
+|---|---|
+| The condition is checked at the beginning of the loop. | The condition is checked at the end of the loop. |
+| If the condition is false at the beginning, the loop body does not execute. | The loop body executes at least once, even if the condition is false. |
+
+### `while` Loop Structure
+```c
+i = 10;
+
+while (i <= 5)
+{
+    printf("%d", i);
+    i++;
+}
+```
+
+### `do-while` Loop Structure
+```c
+i = 10;
+
+do
+{
+    printf("%d", i);
+    i++;
+}
+while (i <= 5);
+```
+
+**Key Point:** `while` checks the condition before executing the body. `do-while` checks the condition after executing the body.
