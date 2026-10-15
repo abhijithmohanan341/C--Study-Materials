@@ -21,6 +21,8 @@ void main()
     }
     while(n>0);
 
+    cout<<"Reverse = "<<reverse;
+
     if(temp==reverse)
     {
         cout<<"Palindrome";
