@@ -1,5 +1,5 @@
-
-/* Write a C++ program to add two matrices. */
+/* Write a C++ program to add two matrices.
+   Check whether rows and columns are equal. */
 
 #include<iostream.h>
 #include<conio.h>
@@ -7,50 +7,61 @@
 void main()
 {
     int a[10][10],b[10][10],sum[10][10];
-    int r,c,i,j;
+    int r1,c1,r2,c2,i,j;
 
     clrscr();
 
-    cout<<"Enter Number of Rows and Columns :: ";
-    cin>>r>>c;
+    cout<<"Enter Rows and Columns in First Matrix :: ";
+    cin>>r1>>c1;
 
     cout<<"Enter First Matrix Elements\n";
 
-    for(i=0;i<r;i++)
+    for(i=0;i<r1;i++)
     {
-        for(j=0;j<c;j++)
+        for(j=0;j<c1;j++)
         {
             cin>>a[i][j];
         }
     }
 
+    cout<<"Enter Rows and Columns in Second Matrix :: ";
+    cin>>r2>>c2;
+
     cout<<"Enter Second Matrix Elements\n";
 
-    for(i=0;i<r;i++)
+    for(i=0;i<r2;i++)
     {
-        for(j=0;j<c;j++)
+        for(j=0;j<c2;j++)
         {
             cin>>b[i][j];
         }
     }
 
-    for(i=0;i<r;i++)
+    if(r1 == r2 && c1 == c2)
     {
-        for(j=0;j<c;j++)
+        for(i=0;i<r1;i++)
         {
-            sum[i][j]=a[i][j]+b[i][j];
+            for(j=0;j<c1;j++)
+            {
+                sum[i][j]=a[i][j]+b[i][j];
+            }
+        }
+
+        cout<<"Addition Matrix\n";
+
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {
+                cout<<sum[i][j]<<"\t";
+            }
+            cout<<"\n";
         }
     }
-
-    cout<<"Addition Matrix\n";
-
-    for(i=0;i<r;i++)
+    else
     {
-        for(j=0;j<c;j++)
-        {
-            cout<<sum[i][j]<<"\t";
-        }
-        cout<<"\n";
+        cout<<"Rows and Columns Are Not Equal\n";
+        cout<<"Matrix Addition Not Possible";
     }
 
     getch();
